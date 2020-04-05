@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Animated } from "react-animated-css";
 import { Button } from 'react-bootstrap';
-import {BrowserRouter as Router,Link,Route} from 'react-router-dom';
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import FirstApi from './FirstApi';
 import SecondApi from './SecondApi';
 import ThirdApi from './ThirdApi';
@@ -49,57 +49,73 @@ class Login extends Component {
         )
     }
 
+    handleLinks = (event) => {
+        if (event.target.name === 'api1') {
+            return (
+                <div>
+                    <Route to='/first'>
+                        <FirstApi />
+                    </Route>
+                </div>
+            )
+        } else if (event.target.name === 'api2') {
+            return (
+                <div>
+                    <Route to='/second'>
+                        <SecondApi />
+                    </Route>
+                </div>
+            )
+        } else if (event.target.name === 'api3') {
+            return (
+                <Route to='/third'>
+                    <ThirdApi />
+                </Route>
+            )
+        }
+    }
+
     render() {
         //Will run if true and form has been submitted/if you want to send render something if it is false put !(bang) in front of this/HTML CONDITIONAL RENDERING
-        if(this.state.hasLoggedIn){
-            return(
+        if (this.state.hasLoggedIn) {
+            return (
                 <div>
-                   
+
                     <h2>Welcome back {this.state.userName}!</h2>
-                    <h1>What would you like to explore today?</h1>
 
                     <Router>
-                        <Link path='/first'>API 1</Link>
-                        <Link path='/second'>API 2</Link>
-                        <Link path='/third'>API 3</Link>
-                        <Route to='/first'>
-                            <FirstApi/>
-                        </Route>
-                        <Route to='/second'>
-                            <SecondApi/>
-                        </Route>
-                        <Route to='/third'>
-                            <ThirdApi/>
-                        </Route>
+                        <Link path='/first' name='api1' onClick={this.handleLinks} className='childL'>API 1</Link>
+                        <Link path='/second' name='api2' onClick={this.handleLinks} className='childL'>API 2</Link>
+                        <Link path='/third' name='api3' onClick={this.handleLinks} className='childL'>API 3</Link>
                     </Router>
-                    
+
                 </div>
             )
         }
 
         return (
             <div>
-                 <Animated animationIn="fadeInUp" animationInDuration={1000} animationOutDuration={1000} isVisible={true}>
-                <form action="" className='signUpForm'></form>
-                <form action="">
+                <Animated animationIn="fadeInUp" animationInDuration={1000} animationOutDuration={1000} isVisible={true}>
+                    
+                    <form action="" className='signUpForm'>
 
                         {/* <legend className='legend'>Login</legend> */}
 
                         <div className='formGroup'>
                             <label htmlFor="userName" className='labels'>User Name: </label>
-                            <br/>
+                            <br />
                             <input type="text" name='userName' id='userName' value={this.state.userName} onChange={this.handleChange} className='input' />
                         </div>
 
                         <div className='formGroup'>
                             <label htmlFor="password" className='labels'>Password: </label>
-                            <br/>
+                            <br />
                             <input type="password" name='password' id='password' value={this.state.password} onChange={this.handleChange} className='input' />
                         </div>
-                        <br/>
-                        <Button onClick={this.handleSubmission} className='childButton'>Login</Button>
+                        <br />
+                        <Button onClick={this.handleSubmission} className='childButton' variant='secondary'>Login</Button>
 
-                </form>
+                    </form>
                 </Animated>
             </div>
         );

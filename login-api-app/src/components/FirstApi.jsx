@@ -8,7 +8,7 @@ class FirstApi extends Component {
     render() { 
         return ( 
             <div>
-                <h1>FIRST API INFORMATION</h1>
+                <p>FIRST API INFORMATION</p>
             </div>
          );
     }

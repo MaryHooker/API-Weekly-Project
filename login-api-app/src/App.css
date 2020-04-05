@@ -39,45 +39,45 @@ body{
   grid-column: 3/7;
   grid-row: 4/7;
   text-align: center;
-  color: rgb(22, 97, 22);
+  color: rgb(41, 26, 13);
 }
 
 .mainButtons{
-  background-color: rgb(22, 97, 22);
+  background-color: rgb(41, 26, 13);
   color: rgb(189, 158, 73);
   font-size: 24px;
-  border: 2px solid rgb(22, 97, 22);
+  border: 2px solid rgb(41, 26, 13);
 }
 
 .mainButtons:hover{
   background-color: rgb(189, 158, 73);
-  color: rgb(33, 102, 33);
-  border: 2px solid rgb(22, 97, 22);
+  color: rgb(41, 26, 13);
+  border: 2px solid rgb(41, 26, 13);
 }
 
 .input{
   background-color: rgb(189, 158, 73);
-  color: rgb(22, 97, 22);
-  border: 1px solid rgb(22, 97, 22);
+  color: rgb(41, 26, 13);
+  border: 1px solid rgb(41, 26, 13);
   border-radius: 4%;
 }
 
 .labels{
-  color: rgb(22, 97, 22);
+  color: rgb(41, 26, 13);
   font-size: 20px;
 }
 
 .childButton{
-  background-color: rgb(22, 97, 22);
+  background-color: rgb(41, 26, 13);
   color: rgb(189, 158, 73);
   font-size: 18px;
-  border: 2px solid rgb(22, 97, 22);
+  border: 2px solid rgb(41, 26, 13);
 }
 
 .childButton:hover{
   background-color: rgb(189, 158, 73);
-  color: rgb(22, 97, 22);
-  border: solid 2px rgb(22, 97, 22);
+  color: rgb(41, 26, 13);
+  border: solid 2px rgb(41, 26, 13);
 }
 
 /* ******************************************************* */
@@ -96,3 +96,8 @@ body{
 /* ******************************************************** */
 /* Login Page */
 
+.childL{
+  color: rgb(30, 97, 30);
+  font-size: 20px;
+  padding: 2%;
+}

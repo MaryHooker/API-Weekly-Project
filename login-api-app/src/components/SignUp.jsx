@@ -94,7 +94,7 @@ handleSubmission = (event) => {
                             <input type="password" name='password' id='password' value={this.state.password} onChange={this.handleChange} className='input' />
                         </div>
                         <br/>
-                        <Button onClick={this.handleSubmission} className='childButton'>Sign Up</Button>
+                        <Button onClick={this.handleSubmission} variant='secondary' className='childButton'>Sign Up</Button>
 
                 </form>
                 </Animated>

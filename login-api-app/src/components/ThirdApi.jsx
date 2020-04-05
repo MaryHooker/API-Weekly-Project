@@ -8,7 +8,7 @@ class ThirdApi extends Component {
     render() { 
         return ( 
             <div>
-                <h1>THIRD API INFORMATION</h1>
+                <p>THIRD API INFORMATION</p>
             </div>
          );
     }

@@ -70,11 +70,11 @@ class AppContainer extends Component {
                         </div>
 
                         <div className='login'>
-                            <Button variant='success' className='mainButtons' onClick={this.updateIsLoggingIn}>Login</Button>
+                            <Button variant='secondary' className='mainButtons' onClick={this.updateIsLoggingIn}>Login</Button>
                         </div>
 
                         <div className='signUp'>
-                            <Button name='button' variant='success' className='mainButtons' onClick={this.updateIsSigningUp}>Sign Up</Button>
+                            <Button name='button' variant='secondary' className='mainButtons' onClick={this.updateIsSigningUp}>Sign Up</Button>
                         </div>
 
                         <div className='display'>
