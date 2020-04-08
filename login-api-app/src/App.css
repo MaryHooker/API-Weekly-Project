@@ -101,3 +101,11 @@ body{
   font-size: 20px;
   padding: 2%;
 }
+
+.breaks{
+  border: 2px solid rgb(41, 26, 13);
+}
+
+p{
+  font-size: 18px;
+}

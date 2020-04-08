@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 
-class FirstApi extends Component {
+class Love extends Component {
     constructor(props) {
         super(props);
         this.state = {  }
@@ -8,10 +8,10 @@ class FirstApi extends Component {
     render() { 
         return ( 
             <div>
-                <p>FIRST API INFORMATION</p>
+                <p>Love Quotes</p>
             </div>
          );
     }
 }
  
-export default FirstApi;
+export default Love;

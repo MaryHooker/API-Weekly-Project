@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { Animated } from "react-animated-css";
 import { Button } from 'react-bootstrap';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
-import FirstApi from './FirstApi';
-import SecondApi from './SecondApi';
-import ThirdApi from './ThirdApi';
+import Live from './Live';
+import Laugh from './Laugh';
+import Love from './Love';
 
 class Login extends Component {
     constructor(props) {
@@ -49,32 +49,6 @@ class Login extends Component {
         )
     }
 
-    handleLinks = (event) => {
-        if (event.target.name === 'api1') {
-            return (
-                <div>
-                    <Route to='/first'>
-                        <FirstApi />
-                    </Route>
-                </div>
-            )
-        } else if (event.target.name === 'api2') {
-            return (
-                <div>
-                    <Route to='/second'>
-                        <SecondApi />
-                    </Route>
-                </div>
-            )
-        } else if (event.target.name === 'api3') {
-            return (
-                <Route to='/third'>
-                    <ThirdApi />
-                </Route>
-            )
-        }
-    }
-
     render() {
         //Will run if true and form has been submitted/if you want to send render something if it is false put !(bang) in front of this/HTML CONDITIONAL RENDERING
         if (this.state.hasLoggedIn) {
@@ -82,21 +56,31 @@ class Login extends Component {
                 <div>
 
                     <h2>Welcome back {this.state.userName}!</h2>
+                    <h3>What do you need more of today?</h3>
 
                     <Router>
-                        <Link path='/first' name='api1' onClick={this.handleLinks} className='childL'>API 1</Link>
-                        <Link path='/second' name='api2' onClick={this.handleLinks} className='childL'>API 2</Link>
-                        <Link path='/third' name='api3' onClick={this.handleLinks} className='childL'>API 3</Link>
+                        <Link to='/live' name='live' onClick={this.handleLinks} className='childL'>Live</Link>
+                        <Link to='/laugh' name='laugh' onClick={this.handleLinks} className='childL'>Laugh</Link>
+                        <Link to='/love' name='love' onClick={this.handleLinks} className='childL'>Love</Link>
+                        <Route path='/live'>
+                            <Live />
+                        </Route>
+                        <Route path='/laugh'>
+                            <Laugh />
+                        </Route>
+                        <Route path='/love'>
+                            <Love />
+                        </Route>
                     </Router>
 
                 </div>
             )
         }
-
+    
         return (
             <div>
                 <Animated animationIn="fadeInUp" animationInDuration={1000} animationOutDuration={1000} isVisible={true}>
-                    
+
                     <form action="" className='signUpForm'>
 
                         {/* <legend className='legend'>Login</legend> */}

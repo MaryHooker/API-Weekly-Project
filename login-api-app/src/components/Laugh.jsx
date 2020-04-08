@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 
-class SecondApi extends Component {
+class Laugh extends Component {
     constructor(props) {
         super(props);
         this.state = {  }
@@ -8,10 +8,10 @@ class SecondApi extends Component {
     render() { 
         return ( 
             <div>
-                <p>SECOND API INFORMATION</p>
+                <p>Laugh Quotes</p>
             </div>
          );
     }
 }
  
-export default SecondApi;
+export default Laugh;
