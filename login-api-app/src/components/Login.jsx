@@ -3,7 +3,7 @@ import { Animated } from "react-animated-css";
 import { Button } from 'react-bootstrap';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import Live from './Live';
-import Laugh from './Laugh';
+import CatFacts from './CatFacts';
 import Love from './Love';
 
 class Login extends Component {
@@ -60,13 +60,13 @@ class Login extends Component {
 
                     <Router>
                         <Link to='/live' name='live' onClick={this.handleLinks} className='childL'>Live</Link>
-                        <Link to='/laugh' name='laugh' onClick={this.handleLinks} className='childL'>Laugh</Link>
+                        <Link to='/catFacts' name='cat' onClick={this.handleLinks} className='childL'>Cat Facts</Link>
                         <Link to='/love' name='love' onClick={this.handleLinks} className='childL'>Love</Link>
                         <Route path='/live'>
                             <Live />
                         </Route>
-                        <Route path='/laugh'>
-                            <Laugh />
+                        <Route path='/catFacts'>
+                            <CatFacts />
                         </Route>
                         <Route path='/love'>
                             <Love />

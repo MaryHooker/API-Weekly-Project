@@ -14,7 +14,7 @@ class Live extends Component {
 
     loadData = async () =>{
        //sanity
-       console.log(`Trying to Fetch Data`)
+       console.log(`Trying to Fetch Live Data`)
 
        const response = await fetch('https://quote-garden.herokuapp.com/api/v2/quotes/all?page=1&limit=100');
 
